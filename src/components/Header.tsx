@@ -63,7 +63,7 @@ export const Header: React.FC<HeaderProps> = ({
         <div>
           <div className="flex items-center gap-2">
             <h1 className="text-xl font-bold tracking-tight text-white flex items-center gap-1.5">
-              CycloSence <span className="text-teal-400 font-mono text-sm px-1.5 py-0.5 rounded bg-teal-950/80 border border-teal-500/40">AI</span>
+              CycloSense <span className="text-teal-400 font-mono text-sm px-1.5 py-0.5 rounded bg-teal-950/80 border border-teal-500/40">AI</span>
             </h1>
             <span className="text-[11px] font-semibold uppercase tracking-wider text-sky-300/80 bg-sky-950/70 border border-sky-800/60 px-2 py-0.5 rounded-full hidden sm:inline-block">
               IMD / WMO Tier-1 System

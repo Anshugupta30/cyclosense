@@ -113,14 +113,14 @@ export const AlertsCenterModal: React.FC<AlertsCenterModalProps> = ({
 
     if (typeof window !== 'undefined' && 'Notification' in window) {
       if (Notification.permission === 'granted') {
-        new Notification(`🚨 CycloSence Alert: Cyclone ${event.name}`, {
+        new Notification(`🚨 CycloSense Alert: Cyclone ${event.name}`, {
           body: `Emergency Alert for ${targetDistrict}: ${event.stage_name} with winds up to ${event.wind_kt}kt. Coastal ETA: ${event.nearest_coast.eta_hours || 24}h.`,
           icon: event.channels?.ir,
         });
       } else if (Notification.permission !== 'denied') {
         Notification.requestPermission().then((perm) => {
           if (perm === 'granted') {
-            new Notification(`🚨 CycloSence Alert: Cyclone ${event.name}`, {
+            new Notification(`🚨 CycloSense Alert: Cyclone ${event.name}`, {
               body: `Emergency Alert for ${targetDistrict}: ${event.stage_name} (${event.wind_kt}kt).`,
             });
           }
@@ -167,7 +167,7 @@ export const AlertsCenterModal: React.FC<AlertsCenterModalProps> = ({
     }, 600);
   };
 
-  const sampleSMS = `[EMERGENCY ALERT - CycloSence IMD]\nCYCLONE ${event.name.toUpperCase()} (${event.stage_name.toUpperCase()})\nWind: ${event.wind_kt}kt (${event.wind_kmh}km/h). Position: ${event.lat}N, ${event.lon}E.\nDistance to ${targetDistrict}: ${event.nearest_coast.distance_km}km (ETA ~${event.nearest_coast.eta_hours || 24}h).\nACTION: Fishermen avoid sea. Move to nearest cyclone shelter. Contact Toll Free: 1070 / 1077.`;
+  const sampleSMS = `[EMERGENCY ALERT - CycloSense IMD]\nCYCLONE ${event.name.toUpperCase()} (${event.stage_name.toUpperCase()})\nWind: ${event.wind_kt}kt (${event.wind_kmh}km/h). Position: ${event.lat}N, ${event.lon}E.\nDistance to ${targetDistrict}: ${event.nearest_coast.distance_km}km (ETA ~${event.nearest_coast.eta_hours || 24}h).\nACTION: Fishermen avoid sea. Move to nearest cyclone shelter. Contact Toll Free: 1070 / 1077.`;
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm p-4 overflow-y-auto">
@@ -421,7 +421,7 @@ export const AlertsCenterModal: React.FC<AlertsCenterModalProps> = ({
         {/* Footer Actions */}
         <div className="bg-[#0b1f36] px-6 py-3.5 border-t border-slate-800 flex items-center justify-between">
           <span className="text-[11px] font-mono text-slate-400">
-            Emergency Dispatch System · CycloSence IMD Multi-Agency Integration
+            Emergency Dispatch System · CycloSense IMD Multi-Agency Integration
           </span>
           <button
             onClick={onClose}

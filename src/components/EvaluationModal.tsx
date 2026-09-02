@@ -185,7 +185,7 @@ export const EvaluationModal: React.FC<EvaluationModalProps> = ({ isOpen, onClos
                     <tbody className="divide-y divide-slate-800/60">
                       <tr className="bg-teal-950/30 text-white font-semibold">
                         <td className="py-2.5 text-teal-300 flex items-center gap-1.5">
-                          <CheckCircle2 className="w-3.5 h-3.5" /> CycloSence Multi-Spectral
+                          <CheckCircle2 className="w-3.5 h-3.5" /> CycloSense Multi-Spectral
                         </td>
                         <td className="py-2.5">INSAT-3D + GPM + SCAT</td>
                         <td className="py-2.5 text-emerald-300">4.8 kt RMSE</td>

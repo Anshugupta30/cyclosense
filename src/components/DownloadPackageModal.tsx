@@ -166,7 +166,7 @@ export const DownloadPackageModal: React.FC<DownloadPackageModalProps> = ({
         {/* Footer */}
         <div className="bg-[#0b1f36] px-6 py-3.5 border-t border-slate-800 flex items-center justify-between">
           <span className="text-[11px] font-mono text-slate-400">
-            CycloSence AI · Complete Standalone Offline Bundle
+            CycloSense AI · Complete Standalone Offline Bundle
           </span>
           <button
             onClick={onClose}

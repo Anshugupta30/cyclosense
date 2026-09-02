@@ -43,9 +43,9 @@ export async function downloadProjectAsZip(onProgress?: (msg: string) => void) {
 
     // Add Windows 1-Click Setup & Run Script
     const runWindowsBat = `@echo off
-title CycloSence AI - Local Server
+title CycloSense AI - Local Server
 echo ========================================================
-echo   CycloSence AI - Local Setup ^& Launcher
+echo   CycloSense AI - Local Setup ^& Launcher
 echo ========================================================
 echo.
 echo [1/2] Checking and installing dependencies (npm install)...
@@ -59,7 +59,7 @@ if %ERRORLEVEL% NEQ 0 (
 )
 
 echo.
-echo [2/2] Launching CycloSence local server on http://localhost:3000...
+echo [2/2] Launching CycloSense local server on http://localhost:3000...
 echo Opening browser in 3 seconds...
 start "" "http://localhost:3000"
 call npm run dev
@@ -70,7 +70,7 @@ pause
     // Add Mac/Linux 1-Click Setup & Run Script
     const runUnixSh = `#!/usr/bin/env bash
 echo "========================================================"
-echo "  CycloSence AI - Local Setup & Launcher"
+echo "  CycloSense AI - Local Setup & Launcher"
 echo "========================================================"
 echo ""
 echo "[1/2] Checking and installing dependencies (npm install)..."
@@ -82,7 +82,7 @@ if [ $? -ne 0 ]; then
 fi
 
 echo ""
-echo "[2/2] Launching CycloSence local server on http://localhost:3000..."
+echo "[2/2] Launching CycloSense local server on http://localhost:3000..."
 # Attempt to open browser
 if which xdg-open > /dev/null; then
   xdg-open http://localhost:3000 &
@@ -95,7 +95,7 @@ npm run dev
     zip.file('start-app-mac-linux.sh', runUnixSh);
 
     // Add quick start README
-    const readme = `# CycloSence AI - Complete Local Package
+    const readme = `# CycloSense AI - Complete Local Package
 
 Everything is pre-packaged and ready to run locally with zero setup!
 
@@ -126,11 +126,11 @@ Double-click: **\`START-APP-WINDOWS.bat\`**
 `;
     zip.file('README-LOCAL-SETUP.md', readme);
 
-    if (onProgress) onProgress('Compressing into cyclosence-ready.zip...');
+    if (onProgress) onProgress('Compressing into cyclosense-ready.zip...');
     const blob = await zip.generateAsync({ type: 'blob' });
 
     if (onProgress) onProgress('Starting download...');
-    saveAs(blob, 'cyclosence-ready-to-run.zip');
+    saveAs(blob, 'cyclosense-ready-to-run.zip');
     return true;
   } catch (err) {
     console.error('Download ZIP error:', err);

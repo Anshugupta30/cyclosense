@@ -187,7 +187,7 @@ export default function App() {
       <footer className="bg-[#050f1a] border-t border-slate-800/80 px-4 py-2.5 text-[11px] font-mono text-slate-400 flex flex-wrap items-center justify-between gap-3">
         <div className="flex items-center gap-2">
           <Radio className="w-3.5 h-3.5 text-teal-400 animate-pulse" />
-          <span>CycloSence AI · Build with भारत 2.0</span>
+          <span>CycloSense AI · Build with भारत 2.0</span>
           <span className="text-slate-600">|</span>
           <span className="text-slate-400">IMD &amp; WMO Scale Multi-Source Cyclone Identification</span>
         </div>
