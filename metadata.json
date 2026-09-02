@@ -1,5 +1,5 @@
 {
-  "name": "CycloSence",
+  "name": "CycloSense",
   "description": "AI/ML Identification, Classification & Prediction of Tropical Cyclones from Multi-Source Satellite Data",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
